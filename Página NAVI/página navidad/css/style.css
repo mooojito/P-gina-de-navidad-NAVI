@@ -1,0 +1,257 @@
+/* ================= BASE ================= */
+body {
+  margin: 0;
+  padding: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pt-6 {
+  padding-top: 6rem;
+}
+
+.imgHome {
+  width: 100%;
+}
+/* ================= FORM REACTIVO ================= */
+
+form {
+  transition: transform 0.3s ease;
+  animation: formFadeUp 0.8s ease both;
+}
+
+/* Inputs, textarea y select */
+.form-control {
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  padding: 5px;
+  font-family: "Lexend", sans-serif;
+  transition: 
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+/* Focus real (cuando el usuario hace click) */
+.form-control:focus {
+  border-color: #689837;
+  box-shadow: 0 0 0 4px rgba(104, 152, 55, 0.2);
+  transform: scale(1.01);
+}
+
+/* Hover suave */
+.form-control:hover {
+  border-color: #a30425;
+}
+
+/* Labels */
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #a30425;
+  transition: color 0.2s ease;
+}
+
+/* Label solo cambia cuando HAY foco REAL */
+.form-group:focus-within label {
+  color: #689837;
+}
+
+/* ================= FIX SELECT ================= */
+
+/* Estado normal del select */
+select.form-control {
+  box-shadow: none;
+  transform: none;
+}
+
+/* Evita que el select quede “activo” siempre */
+select.form-control:not(:focus) {
+  border-color: #e0e0e0;
+  box-shadow: none;
+}
+
+/* ================= BOTÓN ================= */
+
+.btn-navidad {
+  font-size: 18px;
+  padding: 14px;
+  border-radius: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-navidad:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+/* Click efecto */
+.btn-navidad:active {
+  transform: scale(0.97);
+}
+
+/* ================= ANIMACIÓN ================= */
+
+@keyframes formFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= NAVBAR ================= */
+#navbar {
+  background-color: #fffcf4;
+}
+
+#navbar .nav {
+  margin-left: 80px;
+}
+
+#navbarNavDropdown .nav-link {
+  padding: 0.6rem;
+  color: #a30425;
+  font-family: "Funnel Sans", sans-serif;
+}
+
+#navbarNavDropdown .nav-link:hover {
+  color: #D4AF37;
+}
+
+#navbarNavDropdown .nav-link.active {
+  background-color: #689837;
+  color: #fff;
+}
+
+/* Hamburguesa */
+.navbar-toggler-icon {
+  background-image: none;
+}
+
+.navbar-toggler-icon::before {
+  content: "☰";
+  font-size: 28px;
+  color: #FFD700;
+}
+
+/* Logo */
+.navbar-brand img {
+  width: 200px;
+  max-height: 200px;
+}
+
+/* ================= CAROUSEL ================= */
+.carousel-item img {
+  height: 900px;
+  object-fit: cover;
+}
+
+.navbar-nav {
+  background-color: #689837;
+  border: #a30425;
+  color: white;
+}
+/* ================= TEXTOS ================= */
+h4 {
+  font-family: "Mountains of Christmas", serif;
+  font-weight: 700;
+  color: #C1121F;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+h2 {
+  font-family: "Lobster", sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #4e7c28;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.125);
+}
+
+p {
+  font-family: "Lexend", sans-serif;
+}
+
+/* ================= BOTONES ================= */
+.btn-navidad {
+  background-color: #689837;
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-navidad:hover {
+  background-color: #4e7c28;
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* ================= PRODUCTOS ================= */
+.product-card {
+  height: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.25);
+}
+
+/* Imagen cuadrada */
+.product-card .card-img-top {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* ================= TABS PANETONES ================= */
+.nav-tabs {
+  justify-content: center;
+}
+
+.nav-tabs .nav-link {
+  color: #a30425;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #689837;
+  color: #fff;
+  border-radius: 10px 10px 0 0; }
+
+footer {
+    background-color:#a30425;
+  color: white;                 
+  text-align: center;}
+  
+ footer .list-group-item{
+  color: #20b43e;
+ }
+
+
+/* ================= NIEVE ================= */
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 90px 40px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 130px 80px, #fff, transparent);
+  background-size: 200px 200px;
+  animation: snowFall 15s linear infinite;
+}
+
+@keyframes snowFall {
+  from { background-position: 0 0; }
+  to { background-position: 0 200px; }
+}
